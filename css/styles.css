@@ -21,11 +21,55 @@
 
 /* Dark Theme Variables */
 body.dark-theme {
-    --text-color: #f8f9fa;
-    --glass-bg: rgba(0, 0, 0, 0.2);
+    --text-color: #e0e0e0;
+    --text-light: #ffffff;
+    --glass-bg: rgba(18, 18, 18, 0.7);
     --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    --card-hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --card-hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    --bg-gradient-start: #1a1a2e;
+    --bg-gradient-middle: #16213e;
+    --bg-gradient-end: #0f172a;
+    --primary-color: #7c4dff;
+    --secondary-color: #651fff;
+    --accent-color: #00e5ff;
+}
+
+body.dark-theme .glass-card {
+    background: rgba(18, 18, 18, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .glass-input {
+    background: rgba(18, 18, 18, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+body.dark-theme .glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-theme .skill-bar {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .timeline-dot {
+    background: var(--primary-color);
+    border: 2px solid #1a1a2e;
+}
+
+body.dark-theme .timeline-content {
+    background: rgba(18, 18, 18, 0.9);
+}
+
+body.dark-theme .education-details li::before {
+    color: var(--primary-color);
+}
+
+body.dark-theme .notification {
+    background: #1a1a2e;
+    color: #ffffff;
 }
 
 /* Theme Transition */
