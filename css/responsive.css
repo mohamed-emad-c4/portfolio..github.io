@@ -17,6 +17,18 @@
     .section-title {
         font-size: 2.8rem;
     }
+
+    .project-card:hover {
+        transform: var(--card-hover-transform);
+    }
+
+    .certification-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .expertise-item:hover {
+        transform: translateY(-5px);
+    }
 }
 
 /* Medium Screens (992px to 1199px) */
@@ -36,6 +48,10 @@
     .section-title {
         font-size: 2.5rem;
     }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
 }
 
 /* Tablets (768px to 991px) */
@@ -53,6 +69,12 @@
         margin-bottom: 40px;
     }
 
+    .hero-text h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+
     .hero-contact {
         justify-content: center;
     }
@@ -61,12 +83,25 @@
         justify-content: center;
     }
 
+    .social-links a::before {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    .social-links a:hover::before {
+        opacity: 0.7;
+    }
+
     .project-content {
         flex-direction: column;
     }
 
     .project-showcase {
         margin-top: 30px;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
     }
 
     .contact-card {
@@ -83,6 +118,24 @@
 
     .contact-social {
         justify-content: center;
+    }
+
+    .contact-social a::before {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    .contact-social a:hover::before {
+        opacity: 0.7;
+    }
+
+    .footer-social a::before {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    .footer-social a:hover::before {
+        opacity: 0.7;
     }
 }
 
@@ -123,10 +176,21 @@
 
     .glass-nav li {
         margin: 15px 0;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    .glass-nav li.animate-in {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .glass-nav a {
         font-size: 1.2rem;
+    }
+
+    .glass-nav a::after {
+        display: none;
     }
 
     .mobile-menu-btn {
@@ -176,6 +240,25 @@
 
     .secondary-projects {
         grid-template-columns: 1fr;
+    }
+
+    .project-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+    }
+
+    .notification {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        text-align: center;
+        justify-content: center;
     }
 }
 
@@ -269,6 +352,23 @@
     .footer-content p {
         font-size: 1rem;
     }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .contact-detail-item:hover {
+        transform: none;
+    }
+
+    .contact-item:hover {
+        transform: none;
+    }
 }
 
 /* Small Mobile Devices (320px and below) */
@@ -307,6 +407,11 @@
 
     .project-diagram.large {
         height: 200px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
 
@@ -373,7 +478,7 @@
         color: black;
     }
 
-    .skill-progress {
+    .skill-progress-bar {
         border: 1px solid #ddd;
     }
 
@@ -385,5 +490,9 @@
     .btn {
         border: 1px solid #ddd;
         color: black;
+    }
+
+    .notification {
+        display: none;
     }
 }
