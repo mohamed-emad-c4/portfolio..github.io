@@ -192,6 +192,8 @@ const observer = new IntersectionObserver((entries, observer) => {
                 entry.target.classList.add('fade-in');
             } else if (entry.target.classList.contains('certification-card')) {
                 entry.target.classList.add('fade-in');
+            } else if (entry.target.classList.contains('timeline-item')) {
+                entry.target.classList.add('animate');
             }
 
             observer.unobserve(entry.target);
@@ -199,30 +201,9 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, observerOptions);
 
-// Observe sections for fade-in animation
-sections.forEach(section => {
-    section.classList.add('fade-in');
-    observer.observe(section);
-});
-
-// Observe skill bars for progress animation
-skillBars.forEach(bar => {
-    observer.observe(bar);
-});
-
-// Observe project cards for slide-up animation
-projectCards.forEach(card => {
-    observer.observe(card);
-});
-
-// Observe expertise items
-expertiseItems.forEach(item => {
-    observer.observe(item);
-});
-
-// Observe certification cards
-certificationCards.forEach(card => {
-    observer.observe(card);
+// Observe elements
+document.querySelectorAll('.skill-progress-bar, .project-card, .expertise-item, .certification-card, .timeline-item').forEach(el => {
+    observer.observe(el);
 });
 
 // Enhanced Skill Progress Animation with easing

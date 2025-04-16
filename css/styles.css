@@ -1067,8 +1067,16 @@ header .container {
 }
 
 /* Education Section */
+.education-section {
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+}
+
 .education-card {
     margin-bottom: 50px;
+    opacity: 1;
+    visibility: visible;
 }
 
 .education-header {
@@ -1133,6 +1141,13 @@ header .container {
     box-shadow: 0 0 10px var(--accent-color);
 }
 
+.timeline-content {
+    background: var(--glass-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--glass-border);
+}
+
 .timeline-content h4 {
     font-size: 1.3rem;
     margin-bottom: 5px;
@@ -1149,6 +1164,28 @@ header .container {
 .timeline-content p {
     color: var(--text-light);
     opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.education-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education-details li {
+    color: var(--text-light);
+    opacity: 0.8;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.education-details li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
 }
 
 .certifications-container {
