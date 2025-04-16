@@ -1,0 +1,389 @@
+/* Responsive Styles */
+
+/* Large Screens (1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+}
+
+/* Medium Screens (992px to 1199px) */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Tablets (768px to 991px) */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-bottom: 40px;
+    }
+
+    .hero-contact {
+        justify-content: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .project-content {
+        flex-direction: column;
+    }
+
+    .project-showcase {
+        margin-top: 30px;
+    }
+
+    .contact-card {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        margin-bottom: 40px;
+    }
+
+    .contact-details {
+        justify-content: center;
+    }
+
+    .contact-social {
+        justify-content: center;
+    }
+}
+
+/* Mobile Landscape (576px to 767px) */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+
+    header .container {
+        padding: 0 15px;
+    }
+
+    .glass-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s ease;
+        z-index: 1001;
+    }
+
+    .glass-nav.active {
+        left: 0;
+    }
+
+    .glass-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .glass-nav li {
+        margin: 15px 0;
+    }
+
+    .glass-nav a {
+        font-size: 1.2rem;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        z-index: 1002;
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .hero-section {
+        padding-top: 150px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .expertise-list {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .certifications-container {
+        grid-template-columns: 1fr;
+    }
+
+    .secondary-projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Portrait (575px and below) */
+@media (max-width: 575px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .sub-section-title {
+        font-size: 1.5rem;
+    }
+
+    .glass-card {
+        padding: 20px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-info p {
+        font-size: 1rem;
+    }
+
+    .project-features h4 {
+        font-size: 1.1rem;
+    }
+
+    .device-mockup {
+        height: 250px;
+    }
+
+    .project-diagram {
+        height: 180px;
+    }
+
+    .project-diagram.large {
+        height: 250px;
+    }
+
+    .education-header h3 {
+        font-size: 1.4rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 1.2rem;
+    }
+
+    .certification-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+    }
+
+    .footer-logo {
+        font-size: 2rem;
+    }
+
+    .footer-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .glass-card {
+        padding: 15px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    .project-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .device-mockup {
+        height: 200px;
+    }
+
+    .project-diagram {
+        height: 150px;
+    }
+
+    .project-diagram.large {
+        height: 200px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .bg-gradient {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .glass-card {
+        background: white;
+        border: 1px solid #ddd;
+        box-shadow: none;
+    }
+
+    .glass-nav,
+    .theme-toggle,
+    .mobile-menu-btn,
+    .hero-actions,
+    .contact-form,
+    .footer-social {
+        display: none;
+    }
+
+    .hero-section {
+        padding-top: 0;
+    }
+
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .hero-text h1,
+    .hero-text h2,
+    .hero-text p,
+    .section-title,
+    .sub-section-title,
+    .expertise-item h3,
+    .skill-header h3,
+    .project-header h3,
+    .timeline-content h4,
+    .certification-content h4,
+    .contact-info h3,
+    .footer-logo {
+        color: black;
+    }
+
+    .contact-item,
+    .contact-detail-item,
+    .timeline-content p,
+    .certification-content p,
+    .footer-content p,
+    .footer-bottom p {
+        color: black;
+    }
+
+    .skill-progress {
+        border: 1px solid #ddd;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .btn {
+        border: 1px solid #ddd;
+        color: black;
+    }
+}
