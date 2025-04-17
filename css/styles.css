@@ -512,13 +512,13 @@ header .container {
 
 .hero-content {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 40px;
+    padding: 20px;
 }
 
 .hero-text {
-    flex: 1;
+    text-align: center;
 }
 
 .hero-text h1 {
@@ -577,16 +577,22 @@ header .container {
 
 .hero-actions {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
+    margin-top: 30px;
 }
 
 .social-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    padding: 0 20px;
 }
 
-.social-links a {
+.social-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -595,12 +601,14 @@ header .container {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     color: var(--text-light);
-    transition: all var(--transition-speed);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid var(--glass-border);
     position: relative;
     overflow: hidden;
 }
 
-.social-links a::before {
+.social-link::before {
     content: '';
     position: absolute;
     top: 0;
@@ -613,35 +621,174 @@ header .container {
     z-index: 1;
 }
 
-.social-links a:hover::before {
+.social-link:hover::before {
     transform: translateY(0);
 }
 
-.social-links a i {
+.social-link i {
     position: relative;
     z-index: 2;
     transition: transform 0.3s ease;
+    font-size: 1.2rem;
 }
 
-.social-links a:hover i {
+.social-link:hover i {
     transform: scale(1.2);
+    color: white;
 }
 
-.social-links a.pulse {
-    animation: pulse 1s infinite;
+/* Specific colors for each social platform */
+.social-link[href*="github"]:hover::before {
+    background: #333;
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
+.social-link[href*="linkedin"]:hover::before {
+    background: #0077b5;
+}
+
+.social-link[href*="twitter"]:hover::before {
+    background: #1da1f2;
+}
+
+.social-link[href*="instagram"]:hover::before {
+    background: #e4405f;
+}
+
+.social-link[href*="facebook"]:hover::before {
+    background: #1877f2;
+}
+
+.social-link[href*="medium"]:hover::before {
+    background: #00ab6c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .hero-content {
+        padding: 15px;
     }
 
-    50% {
-        transform: scale(1.1);
+    .social-links {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
     }
 
-    100% {
-        transform: scale(1);
+    .hero-image {
+        margin: 0 auto;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-link {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-content {
+        padding: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .social-links {
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .social-link {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-link i {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        gap: 6px;
+    }
+
+    .social-link {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social-link i {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.1rem;
+    }
+
+    .social-links {
+        gap: 5px;
+    }
+
+    .social-link {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-link i {
+        font-size: 0.8rem;
+    }
+}
+
+/* Ensure proper spacing on very small screens */
+@media (max-width: 320px) {
+    .hero-content {
+        padding: 5px;
+    }
+
+    .social-links {
+        gap: 4px;
+    }
+
+    .social-link {
+        width: 28px;
+        height: 28px;
     }
 }
 
