@@ -512,13 +512,13 @@ header .container {
 
 .hero-content {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     gap: 40px;
-    padding: 20px;
 }
 
 .hero-text {
-    text-align: center;
+    flex: 1;
 }
 
 .hero-text h1 {
@@ -577,19 +577,16 @@ header .container {
 
 .hero-actions {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin-top: 30px;
 }
 
 .social-links {
     display: flex;
-    flex-wrap: wrap;
     gap: 15px;
     margin-top: 20px;
     justify-content: center;
-    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .social-link {
@@ -664,61 +661,28 @@ header .container {
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
-    .hero-content {
-        padding: 15px;
-    }
-
     .social-links {
         gap: 12px;
-    }
-}
-
-@media (max-width: 991px) {
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-image {
-        margin: 0 auto;
-    }
-
-    .social-links {
-        gap: 10px;
     }
 
     .social-link {
         width: 38px;
         height: 38px;
     }
+
+    .social-link i {
+        font-size: 1.1rem;
+    }
 }
 
-@media (max-width: 767px) {
-    .hero-content {
-        padding: 10px;
-    }
-
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-text h2 {
-        font-size: 1.5rem;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-        gap: 15px;
-    }
-
+@media (max-width: 991px) {
     .social-links {
-        gap: 8px;
-        padding: 0 10px;
+        gap: 10px;
     }
 
     .social-link {
-        width: 35px;
-        height: 35px;
+        width: 36px;
+        height: 36px;
     }
 
     .social-link i {
@@ -726,19 +690,22 @@ header .container {
     }
 }
 
+@media (max-width: 767px) {
+    .social-links {
+        gap: 8px;
+    }
+
+    .social-link {
+        width: 34px;
+        height: 34px;
+    }
+
+    .social-link i {
+        font-size: 0.95rem;
+    }
+}
+
 @media (max-width: 575px) {
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    .hero-text h2 {
-        font-size: 1.2rem;
-    }
-
-    .hero-text p {
-        font-size: 0.9rem;
-    }
-
     .social-links {
         gap: 6px;
     }
@@ -753,42 +720,23 @@ header .container {
     }
 }
 
-@media (max-width: 375px) {
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-text h2 {
-        font-size: 1.1rem;
-    }
-
-    .social-links {
-        gap: 5px;
-    }
-
+/* Touch device optimizations */
+@media (hover: none) {
     .social-link {
-        width: 30px;
-        height: 30px;
+        background: rgba(255, 255, 255, 0.15);
     }
 
-    .social-link i {
-        font-size: 0.8rem;
-    }
-}
-
-/* Ensure proper spacing on very small screens */
-@media (max-width: 320px) {
-    .hero-content {
-        padding: 5px;
+    .social-link:active {
+        transform: scale(0.95);
     }
 
-    .social-links {
-        gap: 4px;
+    .social-link:active::before {
+        transform: translateY(0);
     }
 
-    .social-link {
-        width: 28px;
-        height: 28px;
+    .social-link:active i {
+        transform: scale(1.2);
+        color: white;
     }
 }
 
