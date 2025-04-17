@@ -1722,3 +1722,42 @@ body.menu-open {
 .api-docs-link span {
     font-weight: 500;
 }
+
+.project-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid var(--glass-border);
+    font-size: 0.9rem;
+}
+
+.github-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.github-link i {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+/* Responsive adjustments for GitHub links */
+@media (max-width: 767px) {
+    .github-link {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}
