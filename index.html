@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Emad | Flutter Developer & System Analyst</title>
+    <title>Mohamed Emad | Software Engineer & Flutter Developer</title>
     <meta name="description"
-        content="Professional portfolio of Mohamed Emad, Flutter Developer and System Analyst specializing in mobile application development and system architecture.">
+        content="Professional portfolio of Mohamed Emad, Flutter Developer and Software Engineer specializing in mobile application development and system architecture.">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,843 +19,952 @@
 <body>
     <div class="bg-gradient"></div>
 
-    <!-- Header and Navigation -->
-    <header>
-        <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
             <div class="logo">ME</div>
-            <nav class="glass-nav">
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
             <div class="theme-toggle">
                 <i class="fas fa-moon"></i>
             </div>
-            <div class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="#hero" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" class="nav-link">
+                        <i class="fas fa-code"></i>
+                        <span>Skills</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" class="nav-link">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#education" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="https://github.com/mohamed-emad-c4" target="_blank" rel="noopener noreferrer"
+                    class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/mohamed-emad-c4" target="_blank" rel="noopener noreferrer"
+                    class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com/mohamed_emad_c4" target="_blank" rel="noopener noreferrer"
+                    class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/mohamed_emad_c4" target="_blank" rel="noopener noreferrer"
+                    class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/mohamed.emad.c4" target="_blank" rel="noopener noreferrer"
+                    class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://medium.com/@mohamed.emad.c4" target="_blank" rel="noopener noreferrer"
+                    class="social-link">
+                    <i class="fab fa-medium-m"></i>
+                </a>
             </div>
         </div>
-    </header>
+    </aside>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section">
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header (Mobile only) -->
+        <header>
             <div class="container">
-                <div class="glass-card hero-card">
-                    <div class="hero-content">
-                        <div class="hero-text">
-                            <h1>Mohamed Emad</h1>
-                            <h2>Software Engineer & Flutter Developer</h2>
-                            <p>Building scalable software solutions and crafting elegant mobile experiences with
-                                Flutter. Specializing in full-stack development and system architecture.</p>
-
-                            <div class="hero-contact">
-                                <div class="contact-item">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>mohamed.emad.c4@gmail.com</span>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="fas fa-phone"></i>
-                                    <span>+201099312476</span>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>El Minia, Egypt</span>
-                                </div>
-                            </div>
-
-                            <div class="hero-actions">
-                                <a href="assets/resume/mohamed_emad_cv.pdf" class="btn primary-btn" download>
-                                    <i class="fas fa-download"></i> Download CV
-                                </a>
-                                <div class="social-links">
-                                    <a href="https://github.com/mohamed-emad-c4" target="_blank"
-                                        rel="noopener noreferrer" class="social-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="https://linkedin.com/in/mohamed-emad-c4" target="_blank"
-                                        rel="noopener noreferrer" class="social-link">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="https://twitter.com/mohamed_emad_c4" target="_blank"
-                                        rel="noopener noreferrer" class="social-link">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="https://instagram.com/mohamed_emad_c4" target="_blank"
-                                        rel="noopener noreferrer" class="social-link">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                    <a href="https://facebook.com/mohamed.emad.c4" target="_blank"
-                                        rel="noopener noreferrer" class="social-link">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="https://medium.com/@mohamed.emad.c4" target="_blank"
-                                        rel="noopener noreferrer" class="social-link">
-                                        <i class="fab fa-medium-m"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hero-image">
-                            <div class="image-container">
-                                <img src="https://avatars.githubusercontent.com/u/132988274?v=4" alt="Mohamed Emad"
-                                    class="profile-image">
-                            </div>
-                        </div>
-                    </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="logo mobile-only">ME</div>
+                <div class="theme-toggle mobile-only">
+                    <i class="fas fa-moon"></i>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="glass-card about-card">
-                    <div class="about-content">
-                        <p>I am a passionate Flutter Developer and Software Engineer with expertise in building
-                            high-performance mobile applications and designing efficient system architectures. My
-                            approach combines technical excellence with creative problem-solving to deliver exceptional
-                            digital experiences.</p>
+        <main>
+            <!-- Hero Section -->
+            <section id="hero" class="hero-section">
+                <div class="container">
+                    <div class="glass-card hero-card">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h1>Mohamed Emad</h1>
+                                <h2>Software Engineer & Flutter Developer</h2>
+                                <p>Building scalable software solutions and crafting elegant mobile experiences with
+                                    Flutter. Specializing in full-stack development and system architecture.</p>
 
-                        <div class="expertise-list">
-                            <div class="expertise-item">
-                                <i class="fas fa-mobile-alt"></i>
-                                <div>
-                                    <h3>Mobile Development</h3>
-                                    <p>Expertise in crafting responsive and intuitive mobile applications using Flutter
-                                    </p>
+                                <div class="hero-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>mohamed.emad.c4@gmail.com</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+201099312476</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>El Minia, Egypt</span>
+                                    </div>
+                                </div>
+
+                                <div class="hero-actions">
+                                    <a href="assets/resume/mohamed_emad_cv.pdf" class="btn primary-btn" download>
+                                        <i class="fas fa-download"></i> Download CV
+                                    </a>
+                                    <div class="social-links">
+                                        <a href="https://github.com/mohamed-emad-c4" target="_blank"
+                                            rel="noopener noreferrer" class="social-link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://linkedin.com/in/mohamed-emad-c4" target="_blank"
+                                            rel="noopener noreferrer" class="social-link">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="https://twitter.com/mohamed_emad_c4" target="_blank"
+                                            rel="noopener noreferrer" class="social-link">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="https://instagram.com/mohamed_emad_c4" target="_blank"
+                                            rel="noopener noreferrer" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="https://facebook.com/mohamed.emad.c4" target="_blank"
+                                            rel="noopener noreferrer" class="social-link">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="https://medium.com/@mohamed.emad.c4" target="_blank"
+                                            rel="noopener noreferrer" class="social-link">
+                                            <i class="fab fa-medium-m"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="expertise-item">
-                                <i class="fas fa-code-branch"></i>
-                                <div>
-                                    <h3>State Management</h3>
-                                    <p>Proficient in Cubit/BLoC patterns for efficient state management in Flutter
-                                        applications</p>
-                                </div>
-                            </div>
-
-                            <div class="expertise-item">
-                                <i class="fas fa-server"></i>
-                                <div>
-                                    <h3>API Integration</h3>
-                                    <p>Experience in integrating RESTful APIs and working with various backend services
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="expertise-item">
-                                <i class="fas fa-paint-brush"></i>
-                                <div>
-                                    <h3>UI/UX Design</h3>
-                                    <p>Skills in creating beautiful, intuitive user interfaces with attention to user
-                                        experience</p>
-                                </div>
-                            </div>
-
-                            <div class="expertise-item">
-                                <i class="fas fa-robot"></i>
-                                <div>
-                                    <h3>AI Integration</h3>
-                                    <p>Passion for integrating AI technologies into mobile applications for enhanced
-                                        functionality</p>
-                                </div>
-                            </div>
-
-                            <div class="expertise-item">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <div>
-                                    <h3>Performance Optimization</h3>
-                                    <p>Skilled in optimizing application performance and solving complex technical
-                                        challenges</p>
+                            <div class="hero-image">
+                                <div class="image-container">
+                                    <img src="https://avatars.githubusercontent.com/u/132988274?v=4" alt="Mohamed Emad"
+                                        class="profile-image">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills-section">
-            <div class="container">
-                <h2 class="section-title">Skills & Technologies</h2>
-                <div class="skills-container">
-                    <!-- Frontend Skills -->
-                    <div class="glass-card skill-card">
-                        <div class="skill-header">
-                            <i class="fas fa-code"></i>
-                            <h3>Frontend</h3>
-                        </div>
-                        <div class="skill-content">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Flutter</span>
-                                    <div class="skill-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+            <!-- About Section -->
+            <section id="about" class="about-section">
+                <div class="container">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="glass-card about-card">
+                        <div class="about-content">
+                            <p>I am a passionate Flutter Developer and Software Engineer with
+                                expertise in building
+                                high-performance mobile applications and designing efficient
+                                system architectures. My
+                                approach combines technical excellence with creative
+                                problem-solving to deliver exceptional
+                                digital experiences.</p>
+
+                            <div class="expertise-list">
+                                <div class="expertise-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <div>
+                                        <h3>Mobile Development</h3>
+                                        <p>Expertise in crafting responsive and intuitive mobile
+                                            applications using Flutter
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Dart</span>
-                                    <div class="skill-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
+                                <div class="expertise-item">
+                                    <i class="fas fa-code-branch"></i>
+                                    <div>
+                                        <h3>State Management</h3>
+                                        <p>Proficient in Cubit/BLoC patterns for efficient state
+                                            management in Flutter
+                                            applications</p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>UI/UX Design</span>
-                                    <div class="skill-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
+                                <div class="expertise-item">
+                                    <i class="fas fa-server"></i>
+                                    <div>
+                                        <h3>API Integration</h3>
+                                        <p>Experience in integrating RESTful APIs and working
+                                            with various backend services
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Backend Skills -->
-                    <div class="glass-card skill-card">
-                        <div class="skill-header">
-                            <i class="fas fa-server"></i>
-                            <h3>Backend</h3>
-                        </div>
-                        <div class="skill-content">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>FastAPI</span>
-                                    <div class="skill-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
+                                <div class="expertise-item">
+                                    <i class="fas fa-paint-brush"></i>
+                                    <div>
+                                        <h3>UI/UX Design</h3>
+                                        <p>Skills in creating beautiful, intuitive user
+                                            interfaces with attention to user
+                                            experience</p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>PostgreSQL</span>
-                                    <div class="skill-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                        <i class="far fa-star"></i>
+                                <div class="expertise-item">
+                                    <i class="fas fa-robot"></i>
+                                    <div>
+                                        <h3>AI Integration</h3>
+                                        <p>Passion for integrating AI technologies into mobile
+                                            applications for enhanced
+                                            functionality</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Tools Skills -->
-                    <div class="glass-card skill-card">
-                        <div class="skill-header">
-                            <i class="fas fa-tools"></i>
-                            <h3>Tools</h3>
-                        </div>
-                        <div class="skill-content">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Git/GitHub</span>
-                                    <div class="skill-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>System Analysis</span>
-                                    <div class="skill-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>MVVM Pattern</span>
-                                    <div class="skill-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Other Skills -->
-                    <div class="glass-card skill-card">
-                        <div class="skill-header">
-                            <i class="fas fa-layer-group"></i>
-                            <h3>Other</h3>
-                        </div>
-                        <div class="skill-content">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Firebase</span>
-                                    <div class="skill-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>SQL</span>
-                                    <div class="skill-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Linux</span>
-                                    <div class="skill-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Python</span>
-                                    <div class="skill-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>OOP</span>
-                                    <div class="skill-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                                <div class="expertise-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <div>
+                                        <h3>Performance Optimization</h3>
+                                        <p>Skilled in optimizing application performance and
+                                            solving complex technical
+                                            challenges</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects-section">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-
-                <!-- Project Filters -->
-                <div class="project-filters">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
-                    <button class="filter-btn" data-filter="backend">Backend</button>
-                    <button class="filter-btn" data-filter="utility">Utility Apps</button>
-                </div>
-
-                <!-- Main Projects -->
-                <div class="main-projects">
-                    <!-- Programming Hub App -->
-                    <div class="glass-card project-card main-project mobile">
-                        <div class="project-header">
-                            <div class="project-icon">
+            <!-- Skills Section -->
+            <section id="skills" class="skills-section">
+                <div class="container">
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <div class="skills-container">
+                        <!-- Frontend Skills -->
+                        <div class="glass-card skill-card">
+                            <div class="skill-header">
                                 <i class="fas fa-code"></i>
+                                <h3>Frontend</h3>
                             </div>
-                            <h3>Programming Hub App</h3>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-info">
-                                <p>An educational mobile application designed to help users learn programming through
-                                    interactive courses, quizzes, and hands-on exercises.</p>
+                            <div class="skill-content">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Flutter</span>
+                                        <div class="skill-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                <div class="project-tech">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Dart</span>
+                                        <div class="skill-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>UI/UX Design</span>
+                                        <div class="skill-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Backend Skills -->
+                        <div class="glass-card skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-server"></i>
+                                <h3>Backend</h3>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>FastAPI</span>
+                                        <div class="skill-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>PostgreSQL</span>
+                                        <div class="skill-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tools Skills -->
+                        <div class="glass-card skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-tools"></i>
+                                <h3>Tools</h3>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Git/GitHub</span>
+                                        <div class="skill-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>System Analysis</span>
+                                        <div class="skill-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>MVVM Pattern</span>
+                                        <div class="skill-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Skills -->
+                        <div class="glass-card skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-layer-group"></i>
+                                <h3>Other</h3>
+                            </div>
+                            <div class="skill-content">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Firebase</span>
+                                        <div class="skill-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>SQL</span>
+                                        <div class="skill-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Linux</span>
+                                        <div class="skill-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Python</span>
+                                        <div class="skill-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>OOP</span>
+                                        <div class="skill-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="projects-section">
+                <div class="container">
+                    <h2 class="section-title">Featured Projects</h2>
+
+                    <!-- Project Filters -->
+                    <div class="project-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                        <button class="filter-btn" data-filter="backend">Backend</button>
+                        <button class="filter-btn" data-filter="utility">Utility Apps</button>
+                    </div>
+
+                    <!-- Main Projects -->
+                    <div class="main-projects">
+                        <!-- Programming Hub App -->
+                        <div class="glass-card project-card main-project mobile">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3>Programming Hub App</h3>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-info">
+                                    <p>An educational mobile application designed to help users
+                                        learn programming through
+                                        interactive courses, quizzes, and hands-on exercises.
+                                    </p>
+
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Flutter</span>
+                                        <span class="tech-tag">Bloc</span>
+                                        <span class="tech-tag">JWT Authentication</span>
+                                        <span class="tech-tag">Custom Backend</span>
+                                    </div>
+
+                                    <div class="project-features">
+                                        <h4>Key Features</h4>
+                                        <ul>
+                                            <li><i class="fas fa-book"></i> Comprehensive
+                                                programming courses</li>
+                                            <li><i class="fas fa-question-circle"></i>
+                                                Interactive quizzes</li>
+                                            <li><i class="fas fa-puzzle-piece"></i>
+                                                Problem-solving exercises</li>
+                                            <li><i class="fas fa-pencil-alt"></i> OCR
+                                                handwriting recognition</li>
+                                            <li><i class="fas fa-comment"></i> Feedback system
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://github.com/yourusername/programming-hub" target="_blank"
+                                            rel="noopener noreferrer" class="github-link">
+                                            <i class="fab fa-github"></i> View on GitHub
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="project-showcase">
+                                    <div class="project-image-container">
+                                        <div class="device-mockup">
+                                            <img src="https://i.ibb.co/kgZzbwsv/Samsung-Galaxy-S20-Ultra-Presentation-7.jpg"
+                                                alt="Programming Hub App Screenshot" class="project-screenshot">
+                                        </div>
+                                    </div>
+                                    <div class="project-diagram">
+                                        <!-- Placeholder for system architecture diagram -->
+                                        <div class="diagram-placeholder">
+                                            <span>Clean Architecture</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Educational API Backend -->
+                        <div class="glass-card project-card main-project backend">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h3>Educational API Backend</h3>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-info">
+                                    <p>A robust backend API system powering the Programming Hub
+                                        application, handling user
+                                        management, content delivery, and learning progress
+                                        tracking.</p>
+
+                                    <div class="project-tech">
+                                        <span class="tech-tag">FastAPI</span>
+                                        <span class="tech-tag">PostgreSQL</span>
+                                        <span class="tech-tag">JWT</span>
+                                    </div>
+
+                                    <div class="project-features">
+                                        <h4>Key Features</h4>
+                                        <ul>
+                                            <li><i class="fas fa-users"></i> User management
+                                            </li>
+                                            <li><i class="fas fa-book"></i> Course management
+                                            </li>
+                                            <li><i class="fas fa-question-circle"></i> Quiz
+                                                functionality</li>
+                                            <li><i class="fas fa-puzzle-piece"></i>
+                                                Problem-solving system</li>
+                                            <li><i class="fas fa-chart-line"></i> Progress
+                                                tracking</li>
+                                            <li><i class="fas fa-lock"></i> JWT security</li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://github.com/yourusername/educational-api" target="_blank"
+                                            rel="noopener noreferrer" class="github-link">
+                                            <i class="fab fa-github"></i> View on GitHub
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="project-showcase">
+                                    <div class="project-diagram large">
+                                        <img src="https://i.ibb.co/NgsBd46f/image.png"
+                                            alt="Backend Architecture Diagram" class="architecture-diagram">
+                                    </div>
+                                    <div class="api-docs">
+                                        <a href="https://elearn-backend-soe2.onrender.com/api/docs#/" target="_blank"
+                                            rel="noopener noreferrer" class="api-docs-link">
+                                            <i class="fas fa-book"></i>
+                                            <span>View API Documentation</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Secondary Projects -->
+                    <h3 class="sub-section-title">Other Projects</h3>
+                    <div class="secondary-projects">
+                        <!-- Shopping List App -->
+                        <div class="glass-card project-card secondary-project mobile">
+                            <div class="project-header small">
+                                <div class="project-icon small">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <h3>Shopping List App</h3>
+                            </div>
+                            <div class="project-content small">
+                                <p>A simple yet effective shopping list application with
+                                    categorization and sharing
+                                    capabilities.</p>
+                                <div class="project-tech small">
+                                    <span class="tech-tag">Flutter</span>
+                                    <span class="tech-tag">Provider</span>
+                                    <span class="tech-tag">SQLite</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/yourusername/shopping-list" target="_blank"
+                                        rel="noopener noreferrer" class="github-link">
+                                        <i class="fab fa-github"></i> View on GitHub
+                                    </a>
+                                </div>
+                                <div class="secondary-project-image">
+                                    <!-- Placeholder for project screenshot -->
+                                    <div class="small-screenshot-placeholder">
+                                        <span>Shopping List App Screenshot</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notes App -->
+                        <div class="glass-card project-card secondary-project mobile">
+                            <div class="project-header small">
+                                <div class="project-icon small">
+                                    <i class="fas fa-sticky-note"></i>
+                                </div>
+                                <h3>Notes App</h3>
+                            </div>
+                            <div class="project-content small">
+                                <p>A feature-rich note-taking application with markdown support
+                                    and cloud synchronization.
+                                </p>
+                                <div class="project-tech small">
                                     <span class="tech-tag">Flutter</span>
                                     <span class="tech-tag">Bloc</span>
-                                    <span class="tech-tag">JWT Authentication</span>
-                                    <span class="tech-tag">Custom Backend</span>
-                                </div>
-
-                                <div class="project-features">
-                                    <h4>Key Features</h4>
-                                    <ul>
-                                        <li><i class="fas fa-book"></i> Comprehensive programming courses</li>
-                                        <li><i class="fas fa-question-circle"></i> Interactive quizzes</li>
-                                        <li><i class="fas fa-puzzle-piece"></i> Problem-solving exercises</li>
-                                        <li><i class="fas fa-pencil-alt"></i> OCR handwriting recognition</li>
-                                        <li><i class="fas fa-comment"></i> Feedback system</li>
-                                    </ul>
+                                    <span class="tech-tag">Firebase</span>
                                 </div>
                                 <div class="project-links">
-                                    <a href="https://github.com/yourusername/programming-hub" target="_blank"
+                                    <a href="https://github.com/yourusername/notes-app" target="_blank"
                                         rel="noopener noreferrer" class="github-link">
                                         <i class="fab fa-github"></i> View on GitHub
                                     </a>
                                 </div>
-                            </div>
-
-                            <div class="project-showcase">
-                                <div class="project-image-container">
-                                    <div class="device-mockup">
-                                        <img src="https://i.ibb.co/kgZzbwsv/Samsung-Galaxy-S20-Ultra-Presentation-7.jpg"
-                                            alt="Programming Hub App Screenshot" class="project-screenshot">
-                                    </div>
-                                </div>
-                                <div class="project-diagram">
-                                    <!-- Placeholder for system architecture diagram -->
-                                    <div class="diagram-placeholder">
-                                        <span>Clean Architecture</span>
+                                <div class="secondary-project-image">
+                                    <!-- Placeholder for project screenshot -->
+                                    <div class="small-screenshot-placeholder">
+                                        <span>Notes App Screenshot</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Educational API Backend -->
-                    <div class="glass-card project-card main-project backend">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fas fa-server"></i>
-                            </div>
-                            <h3>Educational API Backend</h3>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-info">
-                                <p>A robust backend API system powering the Programming Hub application, handling user
-                                    management, content delivery, and learning progress tracking.</p>
-
-                                <div class="project-tech">
-                                    <span class="tech-tag">FastAPI</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                    <span class="tech-tag">JWT</span>
+                        <!-- Moshaf App -->
+                        <div class="glass-card project-card secondary-project mobile">
+                            <div class="project-header small">
+                                <div class="project-icon small">
+                                    <i class="fas fa-book"></i>
                                 </div>
-
-                                <div class="project-features">
-                                    <h4>Key Features</h4>
-                                    <ul>
-                                        <li><i class="fas fa-users"></i> User management</li>
-                                        <li><i class="fas fa-book"></i> Course management</li>
-                                        <li><i class="fas fa-question-circle"></i> Quiz functionality</li>
-                                        <li><i class="fas fa-puzzle-piece"></i> Problem-solving system</li>
-                                        <li><i class="fas fa-chart-line"></i> Progress tracking</li>
-                                        <li><i class="fas fa-lock"></i> JWT security</li>
-                                    </ul>
+                                <h3>Moshaf App</h3>
+                            </div>
+                            <div class="project-content small">
+                                <p>A digital Quran application with beautiful UI, bookmarking,
+                                    and audio recitation
+                                    features.</p>
+                                <div class="project-tech small">
+                                    <span class="tech-tag">Flutter</span>
+                                    <span class="tech-tag">GetX</span>
+                                    <span class="tech-tag">SQLite</span>
                                 </div>
                                 <div class="project-links">
-                                    <a href="https://github.com/yourusername/educational-api" target="_blank"
+                                    <a href="https://github.com/yourusername/moshaf-app" target="_blank"
                                         rel="noopener noreferrer" class="github-link">
                                         <i class="fab fa-github"></i> View on GitHub
                                     </a>
                                 </div>
-                            </div>
-
-                            <div class="project-showcase">
-                                <div class="project-diagram large">
-                                    <img src="https://i.ibb.co/NgsBd46f/image.png" alt="Backend Architecture Diagram"
-                                        class="architecture-diagram">
+                                <div class="secondary-project-image">
+                                    <!-- Placeholder for project screenshot -->
+                                    <div class="small-screenshot-placeholder">
+                                        <span>Moshaf App Screenshot</span>
+                                    </div>
                                 </div>
-                                <div class="api-docs">
-                                    <a href="https://elearn-backend-soe2.onrender.com/api/docs#/" target="_blank"
-                                        rel="noopener noreferrer" class="api-docs-link">
-                                        <i class="fas fa-book"></i>
-                                        <span>View API Documentation</span>
+                            </div>
+                        </div>
+
+                        <!-- Watch Flow App -->
+                        <div class="glass-card project-card secondary-project mobile">
+                            <div class="project-header small">
+                                <div class="project-icon small">
+                                    <i class="fas fa-film"></i>
+                                </div>
+                                <h3>Watch Flow App</h3>
+                            </div>
+                            <div class="project-content small">
+                                <p>A movie and TV show tracking application with recommendations
+                                    and watchlist
+                                    functionality.</p>
+                                <div class="project-tech small">
+                                    <span class="tech-tag">Flutter</span>
+                                    <span class="tech-tag">Cubit</span>
+                                    <span class="tech-tag">TMDB API</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/yourusername/watch-flow" target="_blank"
+                                        rel="noopener noreferrer" class="github-link">
+                                        <i class="fab fa-github"></i> View on GitHub
+                                    </a>
+                                </div>
+                                <div class="secondary-project-image">
+                                    <!-- Placeholder for project screenshot -->
+                                    <div class="small-screenshot-placeholder">
+                                        <span>Watch Flow App Screenshot</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Installed Apps List -->
+                        <div class="glass-card project-card secondary-project utility">
+                            <div class="project-header small">
+                                <div class="project-icon small">
+                                    <i class="fas fa-th"></i>
+                                </div>
+                                <h3>Installed Apps List</h3>
+                            </div>
+                            <div class="project-content small">
+                                <p>A utility app that lists all installed applications with
+                                    detailed information and
+                                    management options.</p>
+                                <div class="project-tech small">
+                                    <span class="tech-tag">Flutter</span>
+                                    <span class="tech-tag">Native Integration</span>
+                                    <span class="tech-tag">Platform Channels</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/yourusername/installed-apps" target="_blank"
+                                        rel="noopener noreferrer" class="github-link">
+                                        <i class="fab fa-github"></i> View on GitHub
+                                    </a>
+                                </div>
+                                <div class="secondary-project-image">
+                                    <!-- Placeholder for project screenshot -->
+                                    <div class="small-screenshot-placeholder">
+                                        <span>Installed Apps List Screenshot</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education & Certifications Section -->
+            <section id="education" class="education-section">
+                <div class="container">
+                    <h2 class="section-title">Education & Certifications</h2>
+
+                    <!-- Education Timeline -->
+                    <div class="glass-card education-card">
+                        <div class="education-header">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Education</h3>
+                        </div>
+                        <div class="education-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Bachelor of Computer Science</h4>
+                                    <span class="timeline-date">September 2023 - Present</span>
+                                    <p>Minia University, Faculty of Computer Science and
+                                        Information Technology</p>
+                                    <ul class="education-details">
+                                        <li>Major: Computer Science</li>
+                                        <li>GPA: 3.8/4.0</li>
+                                        <li>Relevant Coursework: Data Structures, Algorithms,
+                                            Database Systems, Software
+                                            Engineering, Mobile Development</li>
+                                        <li>Activities: Member of ACM Student Chapter, Flutter
+                                            Development Club</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>High School Diploma</h4>
+                                    <span class="timeline-date">September 2019 - June
+                                        2023</span>
+                                    <p>El Minia STEM School</p>
+                                    <ul class="education-details">
+                                        <li>Focus: Mathematics and Computer Science</li>
+                                        <li>GPA: 3.9/4.0</li>
+                                        <li>Activities: Programming Club Leader, Science Fair
+                                            Winner</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="certifications-container">
+                        <div class="glass-card certification-card">
+                            <div class="certification-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="certification-content">
+                                <h4>Flutter Advanced Course - Bloc and MVVM Pattern</h4>
+                                <span class="certification-date">April 2025</span>
+                                <p>Advanced techniques for state management and architectural
+                                    patterns in Flutter
+                                    applications.</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card certification-card">
+                            <div class="certification-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="certification-content">
+                                <h4>Master Git & GitHub</h4>
+                                <span class="certification-date">March 2025</span>
+                                <p>Comprehensive training on version control systems and
+                                    collaborative development
+                                    workflows.</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card certification-card">
+                            <div class="certification-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="certification-content">
+                                <h4>Flutter Mobile Development</h4>
+                                <span class="certification-date">August 2024</span>
+                                <p>Foundation course covering Flutter framework fundamentals and
+                                    mobile application
+                                    development.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section">
+                <div class="container">
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="contact-container">
+                        <div class="glass-card contact-card">
+                            <div class="contact-info">
+                                <h3>Get In Touch</h3>
+                                <p>Feel free to reach out with any questions, opportunities, or
+                                    project inquiries. I'm
+                                    always open to discussing new ideas and potential
+                                    collaborations.</p>
+
+                                <div class="contact-details">
+                                    <div class="contact-detail-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>zemax.c4@gmail.com</span>
+                                    </div>
+                                    <div class="contact-detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+201094002768</span>
+                                    </div>
+                                    <div class="contact-detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>El Minia, Egypt</span>
+                                    </div>
+                                </div>
+
+                                <div class="contact-social">
+                                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </div>
                             </div>
+
+                            <form class="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" class="glass-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" class="glass-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" class="glass-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" class="glass-input" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn primary-btn">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
+            </section>
+        </main>
 
-                <!-- Secondary Projects -->
-                <h3 class="sub-section-title">Other Projects</h3>
-                <div class="secondary-projects">
-                    <!-- Shopping List App -->
-                    <div class="glass-card project-card secondary-project mobile">
-                        <div class="project-header small">
-                            <div class="project-icon small">
-                                <i class="fas fa-shopping-cart"></i>
-                            </div>
-                            <h3>Shopping List App</h3>
-                        </div>
-                        <div class="project-content small">
-                            <p>A simple yet effective shopping list application with categorization and sharing
-                                capabilities.</p>
-                            <div class="project-tech small">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Provider</span>
-                                <span class="tech-tag">SQLite</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/yourusername/shopping-list" target="_blank"
-                                    rel="noopener noreferrer" class="github-link">
-                                    <i class="fab fa-github"></i> View on GitHub
-                                </a>
-                            </div>
-                            <div class="secondary-project-image">
-                                <!-- Placeholder for project screenshot -->
-                                <div class="small-screenshot-placeholder">
-                                    <span>Shopping List App Screenshot</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Notes App -->
-                    <div class="glass-card project-card secondary-project mobile">
-                        <div class="project-header small">
-                            <div class="project-icon small">
-                                <i class="fas fa-sticky-note"></i>
-                            </div>
-                            <h3>Notes App</h3>
-                        </div>
-                        <div class="project-content small">
-                            <p>A feature-rich note-taking application with markdown support and cloud synchronization.
-                            </p>
-                            <div class="project-tech small">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Bloc</span>
-                                <span class="tech-tag">Firebase</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/yourusername/notes-app" target="_blank"
-                                    rel="noopener noreferrer" class="github-link">
-                                    <i class="fab fa-github"></i> View on GitHub
-                                </a>
-                            </div>
-                            <div class="secondary-project-image">
-                                <!-- Placeholder for project screenshot -->
-                                <div class="small-screenshot-placeholder">
-                                    <span>Notes App Screenshot</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Moshaf App -->
-                    <div class="glass-card project-card secondary-project mobile">
-                        <div class="project-header small">
-                            <div class="project-icon small">
-                                <i class="fas fa-book"></i>
-                            </div>
-                            <h3>Moshaf App</h3>
-                        </div>
-                        <div class="project-content small">
-                            <p>A digital Quran application with beautiful UI, bookmarking, and audio recitation
-                                features.</p>
-                            <div class="project-tech small">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">GetX</span>
-                                <span class="tech-tag">SQLite</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/yourusername/moshaf-app" target="_blank"
-                                    rel="noopener noreferrer" class="github-link">
-                                    <i class="fab fa-github"></i> View on GitHub
-                                </a>
-                            </div>
-                            <div class="secondary-project-image">
-                                <!-- Placeholder for project screenshot -->
-                                <div class="small-screenshot-placeholder">
-                                    <span>Moshaf App Screenshot</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Watch Flow App -->
-                    <div class="glass-card project-card secondary-project mobile">
-                        <div class="project-header small">
-                            <div class="project-icon small">
-                                <i class="fas fa-film"></i>
-                            </div>
-                            <h3>Watch Flow App</h3>
-                        </div>
-                        <div class="project-content small">
-                            <p>A movie and TV show tracking application with recommendations and watchlist
-                                functionality.</p>
-                            <div class="project-tech small">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Cubit</span>
-                                <span class="tech-tag">TMDB API</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/yourusername/watch-flow" target="_blank"
-                                    rel="noopener noreferrer" class="github-link">
-                                    <i class="fab fa-github"></i> View on GitHub
-                                </a>
-                            </div>
-                            <div class="secondary-project-image">
-                                <!-- Placeholder for project screenshot -->
-                                <div class="small-screenshot-placeholder">
-                                    <span>Watch Flow App Screenshot</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Installed Apps List -->
-                    <div class="glass-card project-card secondary-project utility">
-                        <div class="project-header small">
-                            <div class="project-icon small">
-                                <i class="fas fa-th"></i>
-                            </div>
-                            <h3>Installed Apps List</h3>
-                        </div>
-                        <div class="project-content small">
-                            <p>A utility app that lists all installed applications with detailed information and
-                                management options.</p>
-                            <div class="project-tech small">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Native Integration</span>
-                                <span class="tech-tag">Platform Channels</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/yourusername/installed-apps" target="_blank"
-                                    rel="noopener noreferrer" class="github-link">
-                                    <i class="fab fa-github"></i> View on GitHub
-                                </a>
-                            </div>
-                            <div class="secondary-project-image">
-                                <!-- Placeholder for project screenshot -->
-                                <div class="small-screenshot-placeholder">
-                                    <span>Installed Apps List Screenshot</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education & Certifications Section -->
-        <section id="education" class="education-section">
+        <!-- Footer -->
+        <footer>
             <div class="container">
-                <h2 class="section-title">Education & Certifications</h2>
-
-                <!-- Education Timeline -->
-                <div class="glass-card education-card">
-                    <div class="education-header">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3>Education</h3>
-                    </div>
-                    <div class="education-timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h4>Bachelor of Computer Science</h4>
-                                <span class="timeline-date">September 2023 - Present</span>
-                                <p>Minia University, Faculty of Computer Science and Information Technology</p>
-                                <ul class="education-details">
-                                    <li>Major: Computer Science</li>
-                                    <li>GPA: 3.8/4.0</li>
-                                    <li>Relevant Coursework: Data Structures, Algorithms, Database Systems, Software
-                                        Engineering, Mobile Development</li>
-                                    <li>Activities: Member of ACM Student Chapter, Flutter Development Club</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h4>High School Diploma</h4>
-                                <span class="timeline-date">September 2019 - June 2023</span>
-                                <p>El Minia STEM School</p>
-                                <ul class="education-details">
-                                    <li>Focus: Mathematics and Computer Science</li>
-                                    <li>GPA: 3.9/4.0</li>
-                                    <li>Activities: Programming Club Leader, Science Fair Winner</li>
-                                </ul>
-                            </div>
+                <div class="glass-card footer-card">
+                    <div class="footer-content">
+                        <div class="footer-logo">ME</div>
+                        <p>Building the future, one line of code at a time.</p>
+                        <div class="footer-social">
+                            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
-
-                <!-- Certifications -->
-                <div class="certifications-container">
-                    <div class="glass-card certification-card">
-                        <div class="certification-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <div class="certification-content">
-                            <h4>Flutter Advanced Course - Bloc and MVVM Pattern</h4>
-                            <span class="certification-date">April 2025</span>
-                            <p>Advanced techniques for state management and architectural patterns in Flutter
-                                applications.</p>
-                        </div>
-                    </div>
-
-                    <div class="glass-card certification-card">
-                        <div class="certification-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <div class="certification-content">
-                            <h4>Master Git & GitHub</h4>
-                            <span class="certification-date">March 2025</span>
-                            <p>Comprehensive training on version control systems and collaborative development
-                                workflows.</p>
-                        </div>
-                    </div>
-
-                    <div class="glass-card certification-card">
-                        <div class="certification-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <div class="certification-content">
-                            <h4>Flutter Mobile Development</h4>
-                            <span class="certification-date">August 2024</span>
-                            <p>Foundation course covering Flutter framework fundamentals and mobile application
-                                development.</p>
-                        </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Mohamed Emad. All rights reserved.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </footer>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2 class="section-title">Contact Me</h2>
-                <div class="contact-container">
-                    <div class="glass-card contact-card">
-                        <div class="contact-info">
-                            <h3>Get In Touch</h3>
-                            <p>Feel free to reach out with any questions, opportunities, or project inquiries. I'm
-                                always open to discussing new ideas and potential collaborations.</p>
-
-                            <div class="contact-details">
-                                <div class="contact-detail-item">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>zemax.c4@gmail.com</span>
-                                </div>
-                                <div class="contact-detail-item">
-                                    <i class="fas fa-phone"></i>
-                                    <span>+201094002768</span>
-                                </div>
-                                <div class="contact-detail-item">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>El Minia, Egypt</span>
-                                </div>
-                            </div>
-
-                            <div class="contact-social">
-                                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <form class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" class="glass-input" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" class="glass-input" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" class="glass-input" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" class="glass-input" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn primary-btn">
-                                <i class="fas fa-paper-plane"></i> Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="glass-card footer-card">
-                <div class="footer-content">
-                    <div class="footer-logo">ME</div>
-                    <p>Building the future, one line of code at a time.</p>
-                    <div class="footer-social">
-                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 Mohamed Emad. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
+        <!-- Scripts -->
+        <script src="js/main.js"></script>
+    </div>
 </body>
 
 </html>

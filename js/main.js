@@ -16,6 +16,10 @@ const educationTimeline = document.querySelector('.education-timeline');
 const certificationCards = document.querySelectorAll('.certification-card');
 const socialLinks = document.querySelectorAll('.social-links a, .contact-social a');
 
+// Sidebar functionality
+const sidebar = document.querySelector('.sidebar');
+const navLinks = document.querySelectorAll('.nav-link');
+
 // Initialize AOS (Animate On Scroll) if available
 if (typeof AOS !== 'undefined') {
     AOS.init({
@@ -29,20 +33,27 @@ if (typeof AOS !== 'undefined') {
 // Mobile Menu Toggle with improved animation
 mobileMenuBtn.addEventListener('click', () => {
     mobileMenuBtn.classList.toggle('active');
-    glassNav.classList.toggle('active');
+    sidebar.classList.toggle('active');
     document.body.classList.toggle('menu-open');
 
-    // Animate menu items sequentially
-    const menuItems = glassNav.querySelectorAll('li');
-    menuItems.forEach((item, index) => {
-        if (glassNav.classList.contains('active')) {
-            setTimeout(() => {
-                item.classList.add('animate-in');
-            }, 100 * index);
-        } else {
-            item.classList.remove('animate-in');
+    // Make sure we only animate items if they exist
+    if (glassNav) {
+        glassNav.classList.toggle('active');
+
+        // Animate menu items sequentially if they exist
+        const menuItems = glassNav.querySelectorAll('li');
+        if (menuItems.length > 0) {
+            menuItems.forEach((item, index) => {
+                if (glassNav.classList.contains('active')) {
+                    setTimeout(() => {
+                        item.classList.add('animate-in');
+                    }, 100 * index);
+                } else {
+                    item.classList.remove('animate-in');
+                }
+            });
         }
-    });
+    }
 });
 
 // Close mobile menu when clicking outside
@@ -51,6 +62,14 @@ document.addEventListener('click', (e) => {
         mobileMenuBtn.classList.remove('active');
         glassNav.classList.remove('active');
         document.body.classList.remove('menu-open');
+    }
+
+    // Close sidebar when clicking outside on mobile
+    if (window.innerWidth <= 991) {
+        if (!sidebar.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            sidebar.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+        }
     }
 });
 
@@ -497,4 +516,47 @@ window.addEventListener('scroll', () => {
             }
         });
     }
+});
+
+// Update active link on scroll
+const navItems = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href').slice(1) === current) {
+            item.classList.add('active');
+        }
+    });
+});
+
+// Smooth scroll for nav links
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+
+            // Close sidebar on mobile after clicking
+            if (window.innerWidth <= 991) {
+                sidebar.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            }
+        }
+    });
 }); 
