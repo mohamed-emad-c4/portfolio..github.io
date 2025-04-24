@@ -441,6 +441,30 @@ socialLinks.forEach(link => {
     });
 });
 
+// Project image slider functionality
+function initProjectImageSliders() {
+    document.querySelectorAll('.project-image-slider').forEach(slider => {
+        const images = JSON.parse(slider.getAttribute('data-images'));
+        let current = 0;
+        const imgEl = slider.querySelector('.slider-image');
+        const leftBtn = slider.querySelector('.slider-arrow-left');
+        const rightBtn = slider.querySelector('.slider-arrow-right');
+
+        function updateImage() {
+            imgEl.src = images[current];
+        }
+
+        leftBtn.addEventListener('click', () => {
+            current = (current - 1 + images.length) % images.length;
+            updateImage();
+        });
+        rightBtn.addEventListener('click', () => {
+            current = (current + 1) % images.length;
+            updateImage();
+        });
+    });
+}
+
 // Initialize animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Animate skill bars if they're in view
@@ -466,6 +490,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize project filters if available
     initProjectFilters();
+
+    // Initialize project image sliders
+    initProjectImageSliders();
 });
 
 // Project filtering functionality
