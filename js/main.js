@@ -453,6 +453,126 @@ function initProjectImageSliders() {
     });
 }
 
+// --- Project Modal Preview ---
+function getProjectCardData(card) {
+    // Extract info from card for modal
+    const title = card.querySelector('.project-header h3')?.textContent || '';
+    const desc = card.querySelector('.project-info p, .project-content.small p')?.textContent || '';
+    const links = Array.from(card.querySelectorAll('.project-links a')).map(a => ({
+        href: a.href,
+        text: a.textContent,
+        icon: a.querySelector('i')?.outerHTML || ''
+    }));
+    let images = [];
+    const slider = card.querySelector('.project-image-slider');
+    if (slider) {
+        try { images = JSON.parse(slider.getAttribute('data-images')); } catch { }
+    }
+    return { title, desc, links, images };
+}
+
+function openProjectModal(card) {
+    const modal = document.getElementById('project-modal');
+    const overlay = modal.querySelector('.modal-overlay');
+    const closeBtn = modal.querySelector('.modal-close');
+    const imgEl = modal.querySelector('.modal-slider-image');
+    const leftBtn = modal.querySelector('.modal-slider-arrow-left');
+    const rightBtn = modal.querySelector('.modal-slider-arrow-right');
+    const titleEl = modal.querySelector('.modal-title');
+    const descEl = modal.querySelector('.modal-description');
+    const linksEl = modal.querySelector('.modal-links');
+    let { title, desc, links, images } = getProjectCardData(card);
+    let current = 0;
+    function updateModalImage() {
+        if (images.length > 0) {
+            imgEl.src = images[current];
+        } else {
+            imgEl.src = '';
+        }
+    }
+    titleEl.textContent = title;
+    descEl.textContent = desc;
+    linksEl.innerHTML = links.map(l => `<a href="${l.href}" target="_blank">${l.icon} ${l.text}</a>`).join(' ');
+    updateModalImage();
+    modal.classList.add('active');
+    // Slider controls
+    leftBtn.onclick = () => { current = (current - 1 + images.length) % images.length; updateModalImage(); };
+    rightBtn.onclick = () => { current = (current + 1) % images.length; updateModalImage(); };
+    // Close modal
+    function closeModal() {
+        modal.classList.remove('active');
+        leftBtn.onclick = rightBtn.onclick = null;
+        overlay.onclick = closeBtn.onclick = null;
+    }
+    overlay.onclick = closeBtn.onclick = closeModal;
+    document.addEventListener('keydown', function escClose(e) { if (e.key === 'Escape') { closeModal(); document.removeEventListener('keydown', escClose); } });
+}
+// Attach modal to all project cards
+function initProjectModals() {
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', e => {
+            // Prevent modal open if clicking a link
+            if (e.target.closest('a')) return;
+            openProjectModal(card);
+        });
+    });
+}
+
+// --- Scroll-to-Top Button ---
+function initScrollToTopBtn() {
+    const btn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) btn.classList.add('show');
+        else btn.classList.remove('show');
+    });
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// --- Animated Typing Effect ---
+function initHeroTyping() {
+    const h2 = document.querySelector('.hero-text h2');
+    if (!h2) return;
+    const titles = [
+        'Software Engineer',
+        'Flutter Developer',
+        'UI/UX Designer',
+        'Problem Solver',
+        'Mobile App Specialist'
+    ];
+    let i = 0, j = 0, isDeleting = false, current = '';
+    const typeSpan = document.createElement('span');
+    typeSpan.className = 'typed-text';
+    h2.innerHTML = '';
+    h2.appendChild(typeSpan);
+    const cursor = document.createElement('span');
+    cursor.className = 'typed-cursor';
+    cursor.textContent = '|';
+    h2.appendChild(cursor);
+    function type() {
+        const full = titles[i];
+        if (isDeleting) {
+            current = full.substring(0, j--);
+        } else {
+            current = full.substring(0, j++);
+        }
+        typeSpan.textContent = current;
+        if (!isDeleting && j > full.length) {
+            isDeleting = true;
+            setTimeout(type, 1200);
+        } else if (isDeleting && j === 0) {
+            isDeleting = false;
+            i = (i + 1) % titles.length;
+            setTimeout(type, 400);
+        } else {
+            setTimeout(type, isDeleting ? 40 : 90);
+        }
+    }
+    type();
+}
+
 // Initialize animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Animate skill bars if they're in view
@@ -481,6 +601,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize project image sliders
     initProjectImageSliders();
+
+    // Initialize project modals
+    initProjectModals();
+
+    // Initialize scroll-to-top button
+    initScrollToTopBtn();
+
+    // Initialize hero typing effect
+    initHeroTyping();
 });
 
 // Project filtering functionality

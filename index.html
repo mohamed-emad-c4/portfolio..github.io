@@ -817,6 +817,26 @@
                 </div>
             </section>
 
+            <!-- Project Modal (hidden by default) -->
+            <div id="project-modal" class="project-modal">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <button class="modal-close" aria-label="Close">&times;</button>
+                    <div class="modal-slider-container">
+                        <button class="modal-slider-arrow modal-slider-arrow-left">&#8592;</button>
+                        <div class="modal-slider-image-container">
+                            <img src="" alt="Project Image" class="modal-slider-image">
+                        </div>
+                        <button class="modal-slider-arrow modal-slider-arrow-right">&#8594;</button>
+                    </div>
+                    <div class="modal-details">
+                        <h3 class="modal-title"></h3>
+                        <p class="modal-description"></p>
+                        <div class="modal-links"></div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Education & Certifications Section -->
             <section id="education" class="education-section">
                 <div class="container">
@@ -973,6 +993,11 @@
                 </div>
             </section>
         </main>
+
+        <!-- Scroll-to-Top Button -->
+        <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
 
         <!-- Footer -->
         <footer>
