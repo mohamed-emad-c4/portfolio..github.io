@@ -2198,3 +2198,16 @@ body {
     overflow-x: hidden;
     width: 100%;
 }
+
+.project-small-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-small-screenshot:hover {
+    transform: scale(1.03);
+}
