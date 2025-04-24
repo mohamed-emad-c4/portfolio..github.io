@@ -1364,6 +1364,92 @@ header .container {
     }
 }
 
+/* Enhanced slider UI */
+.enhanced-slider {
+    position: relative;
+    background: rgba(255,255,255,0.05);
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 12px 0 24px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.enhanced-slider .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: rgba(255,255,255,0.7);
+    color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: none;
+    font-size: 1.7rem;
+    width: 38px;
+    height: 38px;
+    opacity: 0.85;
+    transition: background 0.2s, color 0.2s, opacity 0.2s;
+}
+.enhanced-slider .slider-arrow-left { left: 10px; }
+.enhanced-slider .slider-arrow-right { right: 10px; }
+.enhanced-slider .slider-arrow:hover {
+    background: var(--primary-color);
+    color: #fff;
+    opacity: 1;
+}
+.enhanced-slider .slider-image-container {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 16/9;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    margin: 0 48px;
+}
+.enhanced-slider .slider-image {
+    border-radius: 14px;
+    transition: opacity 0.3s, transform 0.3s;
+    box-shadow: none;
+}
+.enhanced-slider .slider-image:active {
+    transform: scale(0.98);
+}
+.enhanced-slider .slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+.enhanced-slider .slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d1d5db;
+    opacity: 0.6;
+    transition: background 0.2s, opacity 0.2s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.enhanced-slider .slider-dot.active {
+    background: var(--primary-color);
+    opacity: 1;
+    border: 2px solid var(--primary-color);
+}
+@media (max-width: 600px) {
+    .enhanced-slider .slider-image-container {
+        max-width: 98vw;
+        margin: 0 8px;
+    }
+    .enhanced-slider .slider-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+    }
+}
+
 /* Education Section */
 .education-section {
     padding: 100px 0;

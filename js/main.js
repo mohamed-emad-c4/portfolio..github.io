@@ -449,9 +449,29 @@ function initProjectImageSliders() {
         const imgEl = slider.querySelector('.slider-image');
         const leftBtn = slider.querySelector('.slider-arrow-left');
         const rightBtn = slider.querySelector('.slider-arrow-right');
+        const dotsContainer = slider.querySelector('.slider-dots');
+
+        // Create dot indicators
+        if (dotsContainer) {
+            dotsContainer.innerHTML = '';
+            images.forEach((_, idx) => {
+                const dot = document.createElement('span');
+                dot.className = 'slider-dot' + (idx === 0 ? ' active' : '');
+                dot.addEventListener('click', () => {
+                    current = idx;
+                    updateImage();
+                });
+                dotsContainer.appendChild(dot);
+            });
+        }
 
         function updateImage() {
             imgEl.src = images[current];
+            if (dotsContainer) {
+                dotsContainer.querySelectorAll('.slider-dot').forEach((dot, idx) => {
+                    dot.classList.toggle('active', idx === current);
+                });
+            }
         }
 
         leftBtn.addEventListener('click', () => {
