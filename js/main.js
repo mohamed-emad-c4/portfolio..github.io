@@ -76,26 +76,34 @@ document.addEventListener('click', (e) => {
 // Theme Toggle Functionality
 document.addEventListener('DOMContentLoaded', () => {
     // Check for saved theme
-    const savedTheme = localStorage.getItem('theme') === 'dark';
-
-    // Apply saved theme or system preference
-    if (savedTheme || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
         document.body.classList.add('dark-theme');
+        document.body.classList.remove('light-theme');
         themeToggle.querySelector('i').className = 'fas fa-sun';
+    } else if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        document.body.classList.remove('dark-theme');
+        themeToggle.querySelector('i').className = 'fas fa-moon';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark-theme');
+        document.body.classList.remove('light-theme');
+        themeToggle.querySelector('i').className = 'fas fa-sun';
+    } else {
+        document.body.classList.add('light-theme');
+        document.body.classList.remove('dark-theme');
+        themeToggle.querySelector('i').className = 'fas fa-moon';
     }
 });
 
 // Theme toggle click handler
 themeToggle.addEventListener('click', () => {
-    // Toggle dark theme
-    document.body.classList.toggle('dark-theme');
-
-    // Update icon
+    // Toggle between dark and light theme
     const isDark = document.body.classList.contains('dark-theme');
-    themeToggle.querySelector('i').className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-
-    // Save preference
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    document.body.classList.toggle('dark-theme', !isDark);
+    document.body.classList.toggle('light-theme', isDark);
+    themeToggle.querySelector('i').className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
 });
 
 // Enhanced Smooth Scrolling with offset for fixed header
@@ -559,4 +567,4 @@ navLinks.forEach(link => {
             }
         }
     });
-}); 
+});
