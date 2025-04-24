@@ -259,38 +259,6 @@ function animateSkillBar(bar) {
     requestAnimationFrame(updateWidth);
 }
 
-// Enhanced Project Card Hover Effect with 3D tilt
-projectCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.classList.add('hover');
-    });
-
-    card.addEventListener('mouseleave', () => {
-        card.classList.remove('hover');
-    });
-
-    // 3D tilt effect
-    card.addEventListener('mousemove', (e) => {
-        if (!card.classList.contains('hover')) return;
-
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        const rotateX = (y - centerY) / 20;
-        const rotateY = (centerX - x) / 20;
-
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-    });
-});
-
 // Enhanced Contact Form Handling with better validation and feedback
 if (contactForm) {
     const formInputs = contactForm.querySelectorAll('input, textarea');
