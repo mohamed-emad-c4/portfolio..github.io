@@ -538,7 +538,6 @@ function initHeroTyping() {
     const titles = [
         'Software Engineer',
         'Flutter Developer',
-        'UI/UX Designer',
         'Problem Solver',
         'Mobile App Specialist'
     ];
