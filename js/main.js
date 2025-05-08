@@ -673,6 +673,7 @@ function initFullscreenViewer() {
     let currentGallery = null;
     let currentImages = [];
     let currentIndex = 0;
+    let loadingTimeout = null;
 
     // Function to open the fullscreen viewer
     function openViewer(gallery, images, index) {
@@ -683,6 +684,20 @@ function initFullscreenViewer() {
         // Show loading indicator
         loading.style.display = 'block';
         viewerImage.style.opacity = '0';
+
+        // Clear any existing timeout
+        if (loadingTimeout) {
+            clearTimeout(loadingTimeout);
+        }
+
+        // Set timeout to prevent infinite loading
+        loadingTimeout = setTimeout(() => {
+            loading.style.display = 'none';
+            if (!viewerImage.src || viewerImage.src === '') {
+                viewerImage.src = 'https://via.placeholder.com/800x600?text=Image+Not+Available';
+            }
+            viewerImage.style.opacity = '1';
+        }, 5000);
 
         // Set image source
         viewerImage.src = images[index];
@@ -697,14 +712,16 @@ function initFullscreenViewer() {
 
         // Handle image load
         viewerImage.onload = function () {
+            clearTimeout(loadingTimeout);
             loading.style.display = 'none';
             viewerImage.style.opacity = '1';
         };
 
         // Handle image error
         viewerImage.onerror = function () {
+            clearTimeout(loadingTimeout);
             loading.style.display = 'none';
-            viewerImage.src = 'https://via.placeholder.com/800x600?text=Image+Not+Found';
+            viewerImage.src = 'https://via.placeholder.com/800x600?text=Image+Not+Available';
             viewerImage.style.opacity = '1';
         };
     }
@@ -713,6 +730,11 @@ function initFullscreenViewer() {
     function closeViewer() {
         viewer.classList.remove('active');
         document.body.style.overflow = ''; // Restore scrolling
+
+        // Clear any existing timeout
+        if (loadingTimeout) {
+            clearTimeout(loadingTimeout);
+        }
 
         // Clear current image after animation
         setTimeout(() => {
@@ -731,6 +753,20 @@ function initFullscreenViewer() {
         loading.style.display = 'block';
         viewerImage.style.opacity = '0';
 
+        // Clear any existing timeout
+        if (loadingTimeout) {
+            clearTimeout(loadingTimeout);
+        }
+
+        // Set timeout to prevent infinite loading
+        loadingTimeout = setTimeout(() => {
+            loading.style.display = 'none';
+            if (!viewerImage.src || viewerImage.src === '') {
+                viewerImage.src = 'https://via.placeholder.com/800x600?text=Image+Not+Available';
+            }
+            viewerImage.style.opacity = '1';
+        }, 5000);
+
         // Set new image
         viewerImage.src = currentImages[currentIndex];
 
@@ -747,6 +783,20 @@ function initFullscreenViewer() {
         // Show loading indicator
         loading.style.display = 'block';
         viewerImage.style.opacity = '0';
+
+        // Clear any existing timeout
+        if (loadingTimeout) {
+            clearTimeout(loadingTimeout);
+        }
+
+        // Set timeout to prevent infinite loading
+        loadingTimeout = setTimeout(() => {
+            loading.style.display = 'none';
+            if (!viewerImage.src || viewerImage.src === '') {
+                viewerImage.src = 'https://via.placeholder.com/800x600?text=Image+Not+Available';
+            }
+            viewerImage.style.opacity = '1';
+        }, 5000);
 
         // Set new image
         viewerImage.src = currentImages[currentIndex];
@@ -780,13 +830,15 @@ function initFullscreenViewer() {
 
     // Handle image load and error events
     viewerImage.addEventListener('load', () => {
+        clearTimeout(loadingTimeout);
         loading.style.display = 'none';
         viewerImage.style.opacity = '1';
     });
 
     viewerImage.addEventListener('error', () => {
+        clearTimeout(loadingTimeout);
         loading.style.display = 'none';
-        viewerImage.src = 'https://via.placeholder.com/800x600?text=Image+Not+Found';
+        viewerImage.src = 'https://via.placeholder.com/800x600?text=Image+Not+Available';
         viewerImage.style.opacity = '1';
     });
 

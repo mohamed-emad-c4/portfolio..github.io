@@ -2789,7 +2789,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2799,7 +2799,7 @@ body {
 .gallery-spinner {
     width: 40px;
     height: 40px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.5);
     border-top-color: var(--primary-color);
     border-radius: 50%;
     animation: spin 1s infinite linear;
@@ -3010,12 +3010,13 @@ body.light-theme .gallery-indicator.active {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.5);
     border-top-color: var(--primary-color);
     border-radius: 50%;
     animation: spin 1s infinite linear;
+    z-index: 10000;
 }
 
 /* Touch-specific styles for fullscreen viewer */
