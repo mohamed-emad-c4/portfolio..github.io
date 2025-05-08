@@ -7,13 +7,79 @@
     <title>Mohamed Emad | Software Engineer & Flutter Developer</title>
     <meta name="description"
         content="Professional portfolio of Mohamed Emad, Flutter Developer and Software Engineer specializing in mobile application development and system architecture.">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://i.ibb.co">
+
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --primary-color: #6c63ff;
+            --secondary-color: #4a00e0;
+            --accent-color: #00d4ff;
+            --text-color: #333;
+            --text-light: #f8f9fa;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --transition-speed: 0.3s
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden
+        }
+
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-middle), var(--bg-gradient-end));
+            z-index: -1
+        }
+
+        .main-content {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            transition: margin-left 0.3s ease, width 0.3s ease
+        }
+
+        @media (max-width:991px) {
+            .main-content {
+                margin-left: 0;
+                width: 100%
+            }
+        }
+    </style>
+
+    <!-- Non-critical CSS with preload -->
+    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </noscript>
+
+    <!-- Font Awesome with reduced subset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'" crossorigin="anonymous">
+
+    <!-- Google Fonts with display=swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+    </noscript>
 </head>
 
 <body>
@@ -176,7 +242,7 @@
                             <div class="hero-image">
                                 <div class="image-container">
                                     <img src="https://avatars.githubusercontent.com/u/132988274?v=4" alt="Mohamed Emad"
-                                        class="profile-image">
+                                        class="profile-image" width="300" height="300">
                                 </div>
                             </div>
                         </div>
@@ -538,18 +604,13 @@
                                 </div>
 
                                 <div class="project-showcase">
-                                    <div class="project-image-slider"
-                                        data-images='["https://i.ibb.co/kgZzbwsv/Samsung-Galaxy-S20-Ultra-Presentation-7.jpg","https://i.ibb.co/cq6Mxpv/437127950-deb519d7-8374-423b-9c81-2f7174166e6f.jpg","https://i.ibb.co/S4tQx1nf/437128243-fb91ea4e-1ea7-412f-bd63-e98874dff9d9.jpg","https://i.ibb.co/VY1Yy3X4/437128128-82036100-6492-4510-8ab0-891396547284.jpg","https://i.ibb.co/wFbjD8SZ/437127362-2ac9e732-0c90-4a34-9687-ce93af88292b.jpg"]'>
-                                        <button class="slider-arrow slider-arrow-left"
-                                            aria-label="Previous image">&#8592;</button>
-                                        <div class="device-mockup slider-image-container">
-                                            <img src="https://i.ibb.co/kgZzbwsv/Samsung-Galaxy-S20-Ultra-Presentation-7.jpg"
-                                                alt="Programming Learn App Screenshot"
-                                                class="project-screenshot slider-image">
-                                        </div>
-                                        <button class="slider-arrow slider-arrow-right"
-                                            aria-label="Next image">&#8594;</button>
+                                    <!-- New gallery component -->
+                                    <div class="project-gallery"
+                                        data-images='["https://i.ibb.co/kgZzbwsv/Samsung-Galaxy-S20-Ultra-Presentation-7.jpg","https://i.ibb.co/cq6Mxpv/437127950-deb519d7-8374-423b-9c81-2f7174166e6f.jpg","https://i.ibb.co/S4tQx1nf/437128243-fb91ea4e-1ea7-412f-bd63-e98874dff9d9.jpg","https://i.ibb.co/VY1Yy3X4/437128128-82036100-6492-4510-8ab0-891396547284.jpg","https://i.ibb.co/wFbjD8SZ/437127362-2ac9e732-0c90-4a34-9687-ce93af88292b.jpg"]'
+                                        data-title="Programming Learn App" data-autoplay="true" data-delay="5000"
+                                        data-pause-on-hover="true">
                                     </div>
+
                                     <div class="project-diagram">
                                         <div class="diagram-placeholder">
                                             <span>Clean Architecture</span>
@@ -606,8 +667,9 @@
 
                                 <div class="project-showcase">
                                     <div class="project-diagram large">
-                                        <img src="https://i.ibb.co/NgsBd46f/image.png"
-                                            alt="Backend Architecture Diagram" class="architecture-diagram">
+                                        <img src="https://i.ibb.co/NgsBd46f/image.webp"
+                                            alt="Backend Architecture Diagram" class="architecture-diagram"
+                                            loading="lazy" width="800" height="450">
                                     </div>
                                     <div class="api-docs">
                                         <a href="https://elearn-backend-soe2.onrender.com/api/docs#/" target="_blank"
@@ -647,12 +709,13 @@
                                     </a>
                                 </div>
                                 <div class="project-image-slider enhanced-slider"
-                                    data-images='["https://i.ibb.co/DH8Qrzbb/402379628-d1ceb3ee-2044-4892-a767-2793b1a34952.png"]'>
+                                    data-images='["https://i.ibb.co/QFzBsq7Z/402379628.jpg"]'>
                                     <button class="slider-arrow slider-arrow-left"
                                         aria-label="Previous image">&#8592;</button>
                                     <div class="slider-image-container">
-                                        <img src="https://i.ibb.co/DH8Qrzbb/402379628-d1ceb3ee-2044-4892-a767-2793b1a34952.png"
-                                            alt="Shopping List App Screenshot" class="project-screenshot slider-image">
+                                        <img src="https://i.ibb.co/QFzBsq7Z/402379628.jpg"
+                                            alt="Shopping List App Screenshot" class="project-screenshot slider-image"
+                                            loading="lazy" width="400" height="225">
                                     </div>
                                     <button class="slider-arrow slider-arrow-right"
                                         aria-label="Next image">&#8594;</button>
@@ -670,7 +733,11 @@
                                 <h3>Notes App</h3>
                             </div>
                             <div class="project-content small">
-                                <p>Notes Record is an elegant, user-friendly Flutter application for managing your notes and important information. The app features an intuitive interface with beautiful animations and a clean design that helps boost your productivity. Whether you need to jot down quick thoughts, create to-do lists, or store important information, Notes Record has got you covered!
+                                <p>Notes Record is an elegant, user-friendly Flutter application for managing your notes
+                                    and important information. The app features an intuitive interface with beautiful
+                                    animations and a clean design that helps boost your productivity. Whether you need
+                                    to jot down quick thoughts, create to-do lists, or store important information,
+                                    Notes Record has got you covered!
                                 </p>
                                 <div class="project-tech small">
                                     <span class="tech-tag">Flutter</span>
@@ -683,17 +750,10 @@
                                         <i class="fab fa-github"></i> View on GitHub
                                     </a>
                                 </div>
-                                <div class="project-image-slider enhanced-slider"
-                                    data-images='["https://i.ibb.co/CsJ2bg9Y/437053100-cb203bfd-7359-4291-a305-0ec8b268daeb.png","https://i.ibb.co/SXSP0FwM/437054963-f8b303b8-4e64-4cee-8321-96fc9ef037d1.png","https://i.ibb.co/N2Wm1rns/437054906-b0867bb7-c7b1-44ff-8d19-8f70291312fe.png","https://i.ibb.co/d44mvpK8/437054855-aecdfe5a-5bc5-40b2-a065-7d3a821a380f.png"]'>
-                                    <button class="slider-arrow slider-arrow-left"
-                                        aria-label="Previous image">&#8592;</button>
-                                    <div class="slider-image-container">
-                                        <img src="https://i.ibb.co/CsJ2bg9Y/437053100-cb203bfd-7359-4291-a305-0ec8b268daeb.png"
-                                            alt="Notes App Screenshot" class="project-screenshot slider-image">
-                                    </div>
-                                    <button class="slider-arrow slider-arrow-right"
-                                        aria-label="Next image">&#8594;</button>
-                                    <div class="slider-dots"></div>
+                                <!-- New gallery component -->
+                                <div class="project-gallery"
+                                    data-images='["https://i.ibb.co/XrYdZdLH/437053100-cb203bfd-7359-4291-a305-0ec8b268dae.jpg","https://i.ibb.co/SXSP0FwM/437054963-f8b303b8-4e64-4cee-8321-96fc9ef037d1.png","https://i.ibb.co/N2Wm1rns/437054906-b0867bb7-c7b1-44ff-8d19-8f70291312fe.png","https://i.ibb.co/d44mvpK8/437054855-aecdfe5a-5bc5-40b2-a065-7d3a821a380f.png"]'
+                                    data-title="Notes App" data-autoplay="false" data-pause-on-hover="true">
                                 </div>
                             </div>
                         </div>
@@ -707,7 +767,9 @@
                                 <h3>Moshaf App</h3>
                             </div>
                             <div class="project-content small">
-                                <p>Moshaf هو تطبيق مصحف متكامل تم تطويره باستخدام Flutter. يهدف التطبيق إلى توفير تجربة قراءة مريحة للقرآن الكريم مع ميزات تفاعلية مثل البحث في النص، والوصول إلى التفسير، بالإضافة إلى حفظ العلامات والصفحات المفضلة.
+                                <p>Moshaf هو تطبيق مصحف متكامل تم تطويره باستخدام Flutter. يهدف التطبيق إلى توفير تجربة
+                                    قراءة مريحة للقرآن الكريم مع ميزات تفاعلية مثل البحث في النص، والوصول إلى التفسير،
+                                    بالإضافة إلى حفظ العلامات والصفحات المفضلة.
 
                                     features.</p>
                                 <div class="project-tech small">
@@ -722,12 +784,13 @@
                                     </a>
                                 </div>
                                 <div class="project-image-slider enhanced-slider"
-                                    data-images='["https://i.ibb.co/jZWGZ6MJ/422994251-4804572f-0c54-4207-81eb-64e6cafd3481.png"]'>
+                                    data-images='["https://i.ibb.co/Fk9zDWDR/Samsung-Galaxy-S20-Presentation.jpg"]'>
                                     <button class="slider-arrow slider-arrow-left"
                                         aria-label="Previous image">&#8592;</button>
                                     <div class="slider-image-container">
-                                        <img src="https://i.ibb.co/jZWGZ6MJ/422994251-4804572f-0c54-4207-81eb-64e6cafd3481.png"
-                                            alt="Moshaf App Screenshot" class="project-screenshot slider-image">
+                                        <img src="https://i.ibb.co/Fk9zDWDR/Samsung-Galaxy-S20-Presentation.jpg"
+                                            alt="Moshaf App Screenshot" class="project-screenshot slider-image"
+                                            loading="lazy" width="400" height="225">
                                     </div>
                                     <button class="slider-arrow slider-arrow-right"
                                         aria-label="Next image">&#8594;</button>
@@ -745,7 +808,9 @@
                                 <h3>Watch Flow App</h3>
                             </div>
                             <div class="project-content small">
-                                <p>Watch Flow is a Flutter-based application designed to help users organize and track their video playlists efficiently. It allows users to manage videos, categorize them into playlists, and track their progress seamlessly.
+                                <p>Watch Flow is a Flutter-based application designed to help users organize and track
+                                    their video playlists efficiently. It allows users to manage videos, categorize them
+                                    into playlists, and track their progress seamlessly.
 
                                 </p>
                                 <div class="project-tech small">
@@ -760,12 +825,13 @@
                                     </a>
                                 </div>
                                 <div class="project-image-slider enhanced-slider"
-                                    data-images='["https://i.ibb.co/jZWGZ6MJ/422994251-4804572f-0c54-4207-81eb-64e6cafd3481.png"]'>
+                                    data-images='["https://i.ibb.co/jZWGZ6MJ/422994251-4804572f-0c54-4207-81eb-64e6cafd3481.webp"]'>
                                     <button class="slider-arrow slider-arrow-left"
                                         aria-label="Previous image">&#8592;</button>
                                     <div class="slider-image-container">
-                                        <img src="https://i.ibb.co/jZWGZ6MJ/422994251-4804572f-0c54-4207-81eb-64e6cafd3481.png"
-                                            alt="Watch Flow App Screenshot" class="project-screenshot slider-image">
+                                        <img src="https://i.ibb.co/jZWGZ6MJ/422994251-4804572f-0c54-4207-81eb-64e6cafd3481.webp"
+                                            alt="Watch Flow App Screenshot" class="project-screenshot slider-image"
+                                            loading="lazy" width="400" height="225">
                                     </div>
                                     <button class="slider-arrow slider-arrow-right"
                                         aria-label="Next image">&#8594;</button>
@@ -798,13 +864,13 @@
                                     </a>
                                 </div>
                                 <div class="project-image-slider enhanced-slider"
-                                    data-images='["https://i.ibb.co/G4SnFYCC/406720097-1d0d139f-4076-47d2-8ce7-793355610357.png"]'>
+                                    data-images='["https://i.ibb.co/cXpr2f0h/ff.jpg"]'>
                                     <button class="slider-arrow slider-arrow-left"
                                         aria-label="Previous image">&#8592;</button>
                                     <div class="slider-image-container">
-                                        <img src="https://i.ibb.co/G4SnFYCC/406720097-1d0d139f-4076-47d2-8ce7-793355610357.png"
-                                            alt="Installed Apps List Screenshot"
-                                            class="project-screenshot slider-image">
+                                        <img src="https://i.ibb.co/cXpr2f0h/ff.jpg"
+                                            alt="Installed Apps List Screenshot" class="project-screenshot slider-image"
+                                            loading="lazy" width="400" height="225">
                                     </div>
                                     <button class="slider-arrow slider-arrow-right"
                                         aria-label="Next image">&#8594;</button>
@@ -858,7 +924,7 @@
                                     <ul class="education-details">
                                         <li>Major: Computer Science</li>
                                         <li>GPA: 2.6/4.0</li>
-                                       
+
                                     </ul>
                                 </div>
                             </div>
@@ -868,9 +934,9 @@
                                     <h4>High School</h4>
                                     <span class="timeline-date">September 2020 - June
                                         2023</span>
-                                    <p>matay High  School</p>
+                                    <p>matay High School</p>
                                     <ul class="education-details">
-                                        
+
                                     </ul>
                                 </div>
                             </div>
@@ -1014,9 +1080,29 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
-        <script src="js/main.js"></script>
+        <!-- Fullscreen Image Viewer -->
+        <div class="fullscreen-viewer">
+            <button class="fullscreen-close" aria-label="Close fullscreen view">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="fullscreen-image-container">
+                <div class="fullscreen-loading"></div>
+                <img src="" alt="" class="fullscreen-image">
+            </div>
+            <div class="fullscreen-nav">
+                <button class="fullscreen-btn fullscreen-prev" aria-label="Previous image">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="fullscreen-btn fullscreen-next" aria-label="Next image">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="fullscreen-counter">1 / 1</div>
+        </div>
     </div>
+
+    <!-- Defer non-critical JavaScript -->
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

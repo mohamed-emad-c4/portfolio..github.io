@@ -137,6 +137,24 @@
     .footer-social a:hover::before {
         opacity: 0.7;
     }
+
+    .project-gallery {
+        margin: 15px 0;
+    }
+
+    .gallery-container {
+        aspect-ratio: 16/10;
+    }
+
+    .gallery-controls {
+        padding: 10px 12px;
+    }
+
+    .gallery-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 18px;
+    }
 }
 
 /* Mobile Landscape (576px to 767px) */
@@ -260,6 +278,30 @@
         text-align: center;
         justify-content: center;
     }
+
+    .project-gallery {
+        margin: 12px 0;
+        border-radius: 14px;
+    }
+
+    .gallery-container {
+        aspect-ratio: 16/11;
+    }
+
+    .gallery-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .gallery-indicators {
+        gap: 6px;
+    }
+
+    .gallery-indicator {
+        width: 7px;
+        height: 7px;
+    }
 }
 
 /* Mobile Portrait (575px and below) */
@@ -368,6 +410,34 @@
 
     .contact-item:hover {
         transform: none;
+    }
+
+    .project-gallery {
+        margin: 10px 0;
+        border-radius: 12px;
+    }
+
+    .gallery-container {
+        aspect-ratio: 16/12;
+    }
+
+    .gallery-controls {
+        padding: 8px 10px;
+    }
+
+    .gallery-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    .gallery-indicators {
+        gap: 5px;
+    }
+
+    .gallery-indicator {
+        width: 6px;
+        height: 6px;
     }
 }
 
@@ -494,5 +564,22 @@
 
     .notification {
         display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery-container {
+        aspect-ratio: 1/1;
+    }
+
+    .gallery-btn {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+
+    .gallery-indicator {
+        width: 5px;
+        height: 5px;
     }
 }
