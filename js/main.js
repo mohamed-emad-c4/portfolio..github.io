@@ -80,31 +80,44 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-theme');
         document.body.classList.remove('light-theme');
-        themeToggle.querySelector('i').className = 'fas fa-sun';
+        updateAllThemeIcons('dark');
     } else if (savedTheme === 'light') {
         document.body.classList.add('light-theme');
         document.body.classList.remove('dark-theme');
-        themeToggle.querySelector('i').className = 'fas fa-moon';
+        updateAllThemeIcons('light');
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark-theme');
         document.body.classList.remove('light-theme');
-        themeToggle.querySelector('i').className = 'fas fa-sun';
+        updateAllThemeIcons('dark');
     } else {
         document.body.classList.add('light-theme');
         document.body.classList.remove('dark-theme');
-        themeToggle.querySelector('i').className = 'fas fa-moon';
+        updateAllThemeIcons('light');
     }
+
+    // Add click event to all theme toggle buttons
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            // Toggle between dark and light theme
+            const isDark = document.body.classList.contains('dark-theme');
+            document.body.classList.toggle('dark-theme', !isDark);
+            document.body.classList.toggle('light-theme', isDark);
+
+            // Update theme icons
+            updateAllThemeIcons(isDark ? 'light' : 'dark');
+
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        });
+    });
 });
 
-// Theme toggle click handler
-themeToggle.addEventListener('click', () => {
-    // Toggle between dark and light theme
-    const isDark = document.body.classList.contains('dark-theme');
-    document.body.classList.toggle('dark-theme', !isDark);
-    document.body.classList.toggle('light-theme', isDark);
-    themeToggle.querySelector('i').className = isDark ? 'fas fa-moon' : 'fas fa-sun';
-    localStorage.setItem('theme', isDark ? 'light' : 'dark');
-});
+// Helper function to update all theme toggle icons
+function updateAllThemeIcons(theme) {
+    document.querySelectorAll('.theme-toggle i').forEach(icon => {
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+}
 
 // Enhanced Smooth Scrolling with offset for fixed header
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -558,15 +558,29 @@ header .container {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    /* Remove tap highlight on iOS */
+    touch-action: manipulation;
+    /* Improve touch behavior */
+}
+
+/* Touch-specific styles */
+@media (hover: none) {
+    .theme-toggle {
+        min-width: 44px;
+        /* Ensure minimum touch target size */
+        min-height: 44px;
+    }
+
+    .theme-toggle:active {
+        transform: scale(0.95);
+        background: rgba(255, 255, 255, 0.2);
+    }
 }
 
 .theme-toggle:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
-}
-
-.theme-toggle:active {
-    transform: scale(0.95);
 }
 
 .theme-toggle i {
@@ -2420,7 +2434,7 @@ body.menu-open {
     background-color: var(--text-light);
     margin: 5px 0;
     border-radius: 3px;
-    transition: all 0.3s ease;
+    transition: all var(--transition-speed);
 }
 
 /* Responsive Styles */
@@ -2604,6 +2618,12 @@ body.dark-theme .nav-link:hover {
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px;
+    }
+
+    .theme-toggle.mobile-only {
+        z-index: 1010;
+        position: relative;
+        cursor: pointer;
     }
 
     /* Improve mobile sidebar appearance */
